@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- pager indicator dimens -->
+  <dimen name="default_indicator_radius">4dp</dimen>
+  <dimen name="default_indicator_gap_width">6dp</dimen>
+  <dimen name="default_indicator_stroke_width">1dp</dimen>
+
+</resources>
