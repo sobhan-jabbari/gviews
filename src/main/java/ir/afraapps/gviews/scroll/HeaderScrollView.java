@@ -5,12 +5,17 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 
 import androidx.core.widget.NestedScrollView;
 
 
 public class HeaderScrollView extends NestedScrollView {
+
+  private static final String TAG = HeaderScrollView.class.getSimpleName();
+  private static final boolean D = true;
+
   private int mPrevScrollY;
   private int mScrollY;
   private int offset;
@@ -20,6 +25,7 @@ public class HeaderScrollView extends NestedScrollView {
   private int toolbarHeightHalf;
   private ScrollViewHeaderCallbacks mCallbacks;
   private HeaderScrollView.ScrollStateHandler stateHandler;
+
 
   public HeaderScrollView(Context context) {
     super(context);
@@ -121,6 +127,13 @@ public class HeaderScrollView extends NestedScrollView {
 
   }
 
+  public void resetToolbarOffset() {
+    this.offset = 0;
+    if (this.mCallbacks != null) {
+      this.mCallbacks.onOffsetChanged(this.offset);
+    }
+  }
+
   public void setHeaderItemsHeight(int headerHeight, int toolbarHeight, int headerMiniHeight) {
     this.toolbarHeight = toolbarHeight;
     this.toolbarHeightHalf = toolbarHeight / 2;
@@ -148,14 +161,34 @@ public class HeaderScrollView extends NestedScrollView {
   @SuppressLint({"ClickableViewAccessibility"})
   public boolean onTouchEvent(MotionEvent ev) {
     float height = (float) (this.headerHeight - this.mScrollY);
-    switch (ev.getAction()) {
-      case 1:
-      case 3:
+    /*switch (ev.getAction()) {
+      case MotionEvent.ACTION_DOWN:
+        if (D) Log.i(TAG, "on touch action down");
+        scrolledByUser = true;
+        break;
+      case MotionEvent.ACTION_UP:
+      case MotionEvent.ACTION_CANCEL:
+        if (D) Log.i(TAG, "on touch action up");
         this.post(this.stateHandler);
-    }
-
+        break;
+    }*/
     return ev.getY() >= height && super.onTouchEvent(ev);
   }
+
+
+
+  @Override
+  public boolean dispatchTouchEvent(MotionEvent ev) {
+    switch (ev.getAction()) {
+      case MotionEvent.ACTION_UP:
+      case MotionEvent.ACTION_CANCEL:
+        if (D) Log.i(TAG, "on touch dispatch action up");
+        this.post(this.stateHandler);
+        break;
+    }
+    return super.dispatchTouchEvent(ev);
+  }
+
 
   @Override
   protected void onDetachedFromWindow() {
