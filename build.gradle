@@ -12,8 +12,8 @@ buildscript {
 }
 
 ext {
-    appVersionCode = 1113
-    appVersionName = '1.1.13'
+    appVersionCode = 1115
+    appVersionName = '1.1.15'
 }
 
 android {
@@ -66,14 +66,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta03'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.1.0-alpha09'
-    implementation 'androidx.fragment:fragment:1.2.0-alpha02'
-    implementation 'androidx.preference:preference:1.1.0-rc01'
+    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'androidx.fragment:fragment:1.2.0-alpha04'
+    implementation 'androidx.preference:preference:1.1.0'
 
-    api 'ir.afraapps:basic:1.1.15'
+    api 'ir.afraapps:basic:1.1.18'
 
 }
 
