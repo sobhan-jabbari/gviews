@@ -46,6 +46,12 @@ public class UAlertDialog implements DialogInterface.OnClickListener {
     this.context = context;
   }
 
+  public void dismiss() {
+    if (this.dialog != null) {
+      this.dialog.dismiss();
+    }
+  }
+
   public void show() {
     if (this.dialog != null && this.dialog.isShowing()) {
       this.dialog.dismiss();
