@@ -7,13 +7,13 @@ buildscript {
     }
     dependencies {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
     }
 }
 
 ext {
-    appVersionCode = 1119
-    appVersionName = '1.1.19'
+    appVersionCode = 1120
+    appVersionName = '1.1.20'
 }
 
 android {
@@ -67,13 +67,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha01'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha02'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.2.0-alpha05'
-    implementation 'androidx.fragment:fragment:1.2.2'
-    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+    implementation 'androidx.fragment:fragment:1.2.4'
+    implementation 'androidx.preference:preference:1.1.1'
 
-    api 'ir.afraapps:basic:1.1.21'
+    api 'ir.afraapps:basic:1.1.24'
 
 }
 
