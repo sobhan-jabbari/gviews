@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- MaterialProgressBar -->
+  <!--==========================================================================-->
+  <declare-styleable name="MaterialProgressBar">
+    <attr name="mpb_progressStyle" format="enum">
+      <enum name="circular" value="0"/>
+      <enum name="horizontal" value="1"/>
+    </attr>
+    <attr name="mpb_setBothDrawables" format="boolean"/>
+    <attr name="mpb_useIntrinsicPadding" format="boolean"/>
+    <attr name="mpb_progress" format="float"/>
+    <attr name="mpb_thickness" format="float"/>
+    <attr name="mpb_smooth_progress" format="boolean"/>
+    <attr name="mpb_indeterminate" format="boolean"/>
+    <attr name="mpb_showProgressBackground" format="boolean"/>
+    <attr name="mpb_progressTint" format="color|reference"/>
+    <attr name="mpb_progressTintMode" format="enum">
+      <enum name="src_over" value="3"/>
+      <enum name="src_in" value="5"/>
+      <enum name="src_atop" value="9"/>
+      <enum name="multiply" value="14"/>
+      <enum name="screen" value="15"/>
+      <enum name="add" value="16"/>
+    </attr>
+    <attr name="mpb_secondaryProgressTint" format="color|reference"/>
+    <attr name="mpb_secondaryProgressTintMode" format="enum">
+      <enum name="src_over" value="3"/>
+      <enum name="src_in" value="5"/>
+      <enum name="src_atop" value="9"/>
+      <enum name="multiply" value="14"/>
+      <enum name="screen" value="15"/>
+      <enum name="add" value="16"/>
+    </attr>
+    <attr name="mpb_progressBackgroundTint" format="color|reference"/>
+    <attr name="mpb_progressBackgroundTintMode" format="enum">
+      <enum name="src_over" value="3"/>
+      <enum name="src_in" value="5"/>
+      <enum name="src_atop" value="9"/>
+      <enum name="multiply" value="14"/>
+      <enum name="screen" value="15"/>
+      <enum name="add" value="16"/>
+    </attr>
+    <attr name="mpb_indeterminateTint" format="color|reference"/>
+    <attr name="mpb_indeterminateTintMode" format="enum">
+      <enum name="src_over" value="3"/>
+      <enum name="src_in" value="5"/>
+      <enum name="src_atop" value="9"/>
+      <enum name="multiply" value="14"/>
+      <enum name="screen" value="15"/>
+      <enum name="add" value="16"/>
+    </attr>
+  </declare-styleable>
+
+
+  <!-- CircularImageView -->
+  <!--==========================================================================-->
+  <declare-styleable name="CircularImageView">
+    <attr name="civ_border" format="boolean"/>
+    <attr name="civ_border_width" format="dimension"/>
+    <attr name="civ_border_color" format="color"/>
+    <attr name="civ_color" format="color"/>
+    <attr name="civ_shadow" format="boolean"/>
+    <attr name="civ_shadow_color" format="color"/>
+    <attr name="civ_shadow_radius" format="float"/>
+  </declare-styleable>
+
+
+  <!-- Visualizer -->
+  <!--==========================================================================-->
+  <declare-styleable name="Visualizer">
+    <attr name="aw_format" format="enum">
+      <enum name="horizontal_lines" value="0"/>
+      <enum name="horizontal_balls" value="1"/>
+      <enum name="vertical_lines" value="2"/>
+      <enum name="vertical_balls" value="3"/>
+    </attr>
+    <attr name="aw_gravity" format="enum">
+      <enum name="center" value="0"/>
+      <enum name="left" value="1"/>
+      <enum name="top" value="2"/>
+      <enum name="right" value="3"/>
+      <enum name="bottom" value="4"/>
+    </attr>
+    <attr name="aw_width" format="dimension"/>
+    <attr name="aw_height" format="dimension"/>
+    <attr name="aw_num_waves" format="integer"/>
+
+    <attr name="aw_line_with" format="dimension"/>
+    <attr name="aw_line_min_with" format="dimension"/>
+    <attr name="aw_line_height" format="dimension"/>
+    <attr name="aw_line_min_height" format="dimension"/>
+    <attr name="aw_line_spacing" format="dimension"/>
+    <attr name="aw_line_border_radius" format="integer"/>
+
+    <attr name="aw_color_uniform" format="reference"/>
+    <attr name="aw_color_is_gradient" format="boolean"/>
+    <attr name="aw_color_gradient_start" format="reference"/>
+    <attr name="aw_color_gradient_end" format="reference"/>
+  </declare-styleable>
+
+
+  <!-- Page indicator -->
+  <!--==========================================================================-->
+  <attr name="PageIndicatorStyle" format="reference"/>
+
+  <declare-styleable name="PageIndicator">
+    <attr name="centered" format="boolean"/>
+    <attr name="unselectedColor" format="color"/>
+    <attr name="selectedColor" format="color"/>
+    <attr name="lineWidth" format="dimension"/>
+    <attr name="strokeWidth" format="dimension"/>
+    <attr name="gapWidth" format="dimension"/>
+    <attr name="android:background"/>
+  </declare-styleable>
+
+</resources>
