@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 ext {
-    appVersionCode = 1123
-    appVersionName = '1.1.23'
+    appVersionCode = 1124
+    appVersionName = '1.1.24'
 }
 
 android {
