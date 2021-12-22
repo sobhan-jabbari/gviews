@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 ext {
-    appVersionCode = 1124
-    appVersionName = '1.1.24'
+    appVersionCode = 1125
+    appVersionName = '1.1.25'
 }
 
 android {
@@ -60,7 +60,7 @@ dependencies {
     implementation 'androidx.fragment:fragment:1.4.0'
     implementation 'androidx.preference:preference:1.1.1'
 
-    api 'com.github.sobhan-jabbari:basic:1.1.34'
+    api 'com.github.sobhan-jabbari:basic:1.1.35'
 
 }
 
